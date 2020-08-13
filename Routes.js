@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Splashscreen from "./app/Screens/AuthScreens/Splashscreen";
 import Login from "./app/Screens/AuthScreens/Login";
 import Home from "./app/Screens/HomeScreens/Home";
+import ResourceTimeSheet from "./app/Screens/HomeScreens/ResourceTimeSheet";
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,11 @@ const AuthStack = () => (
 const HomeStack = () => (
   <Stack.Navigator screenOptions={{ headerShown: false }}>
     <Stack.Screen name="Home" component={Home} />
+    <Stack.Screen
+      options={{ headerShown: true }}
+      name="Resource"
+      component={ResourceTimeSheet}
+    />
   </Stack.Navigator>
 );
 

@@ -22,6 +22,7 @@ export default class Home extends Component {
           }}
         >
           <TouchableOpacity
+            onPress={() => this.props.navigation.navigate("Resource")}
             style={{
               width: "80%",
               borderRadius: 10,
