@@ -20,7 +20,10 @@ const AuthStack = () => (
 );
 
 const HomeStack = () => (
-  <Stack.Navigator screenOptions={{ headerShown: false }}>
+  <Stack.Navigator
+    initialRouteName="Resource"
+    screenOptions={{ headerShown: false }}
+  >
     <Stack.Screen name="Home" component={Home} />
     <Stack.Screen
       options={{ headerShown: true }}
@@ -35,6 +38,7 @@ export default class Routes extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator
+          initialRouteName="Home"
           screenOptions={{ gestureEnabled: false, headerShown: false }}
         >
           <Stack.Screen name="Auth" component={AuthStack} />
