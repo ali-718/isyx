@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Text, View } from "react-native";
 import { Dropdown } from "react-native-material-dropdown";
 import DatePicker from "react-native-datepicker";
+import { StandardButton } from "../../components/Buttons";
 
 export default class ResourceTimeSheet extends Component {
   state = {
@@ -27,7 +28,7 @@ export default class ResourceTimeSheet extends Component {
                   justifyContent: "center",
                 }}
               >
-                <Text>From Date</Text>
+                <Text style={{ fontSize: 12 }}>From Date</Text>
               </View>
               <DatePicker
                 style={{ width: "90%", marginTop: 20 }}
@@ -55,7 +56,7 @@ export default class ResourceTimeSheet extends Component {
                   justifyContent: "center",
                 }}
               >
-                <Text>To Date</Text>
+                <Text style={{ fontSize: 12 }}>To Date</Text>
               </View>
               <DatePicker
                 style={{ width: "90%", marginTop: 20 }}
@@ -70,6 +71,55 @@ export default class ResourceTimeSheet extends Component {
                   this.setState({ toDate: date });
                 }}
               />
+            </View>
+          </View>
+
+          <View style={{ width: "100%", alignItems: "center", marginTop: 20 }}>
+            <View
+              style={{
+                width: "100%",
+                paddingHorizontal: 10,
+                flexDirection: "row",
+              }}
+            >
+              <View style={{ width: "50%" }}>
+                <StandardButton
+                  width={"90%"}
+                  // Action={() => this.props.navigation.navigate("Home")}
+                  text="Clear All"
+                />
+              </View>
+              <View style={{ width: "50%" }}>
+                <StandardButton
+                  width={"90%"}
+                  // Action={() => this.props.navigation.navigate("Home")}
+                  text="Approve selected lines"
+                />
+              </View>
+            </View>
+
+            <View
+              style={{
+                width: "100%",
+                paddingHorizontal: 10,
+                flexDirection: "row",
+                marginTop: 20,
+              }}
+            >
+              <View style={{ width: "50%" }}>
+                <StandardButton
+                  width={"90%"}
+                  // Action={() => this.props.navigation.navigate("Home")}
+                  text="Submit "
+                />
+              </View>
+              <View style={{ width: "50%" }}>
+                <StandardButton
+                  width={"90%"}
+                  // Action={() => this.props.navigation.navigate("Home")}
+                  text="Add Line"
+                />
+              </View>
             </View>
           </View>
         </View>

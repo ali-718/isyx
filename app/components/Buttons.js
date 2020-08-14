@@ -7,7 +7,7 @@ export const StandardButton = (props) => (
     onPress={() => props.Action()}
     style={{
       backgroundColor: ThemeColor,
-      width: "80%",
+      width: props.width || "80%",
       height: 40,
       alignItems: "center",
       justifyContent: "center",
